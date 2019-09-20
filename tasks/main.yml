@@ -1,0 +1,16 @@
+---
+- name: Install Java OpenJDK
+  package:
+    name: java-1.8.0-openjdk-devel
+- name: Setup javac alternatives
+  alternatives:
+    name: javac
+    path: auto
+- name: Setup java alternatives
+  alternatives:
+    name: java
+    path: auto
+- name: Install maven
+  package:
+    name: maven
+  when: ansible_distribution != 'Amazon'
