@@ -1,7 +1,7 @@
 ---
 - name: Install Java OpenJDK
   package:
-    name: java-1.8.0-openjdk-devel
+    name: java-latest-openjdk-devel
 - name: Setup javac alternatives
   alternatives:
     name: javac
